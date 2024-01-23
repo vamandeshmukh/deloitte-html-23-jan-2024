@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div>
+        <h1>Login</h1>
+        <hr />
+        <p>Please login here:</p>
+        <form id="loginform" onsubmit="submitLogin(); return false">
+            <label for="username">Username</label>
+            <input type="text" id="username" value="" name="username" placeholder="Please enter username" required
+                autofocus />
+            <br />
+            <br />
+            <label for="password">Username</label>
+            <input type="password" id="password" value="" name="password" placeholder="Please enter password"
+                required />
+            <br />
+            <br />
+            <input type="submit" value="Login" />
+        </form>
+    </div>
+
+    <div>
+        <p id="aftersubmit"></p>
+    </div>
+
+    <script>
+        const submitLogin = () => {
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+
+            console.log(user);
+
+            if (user === 'sonu' && pass === 'sonu') {
+                document.getElementById("aftersubmit").innerText = "Welcome!";
+            }
+            else {
+                document.getElementById("aftersubmit").innerText = "Wrong credentials!";
+            }
+            document.getElementById("loginform").reset();
+        };
+    </script>
+
+</body>
+
+</html>
