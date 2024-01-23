@@ -3,6 +3,8 @@
 
 <head>
 
+    
+
 </head>
 
 <body>
@@ -23,6 +25,8 @@
             <br />
             <input type="submit" value="Login" />
         </form>
+
+
     </div>
 
     <div>
@@ -30,9 +34,19 @@
     </div>
 
     <script>
+
+        const someVariable = 0;
+
+        const asdf = () => { };
+
         const submitLogin = () => {
+
             const user = document.getElementById("username").value;
             const pass = document.getElementById("password").value;
+
+            // console.log('10' == 10); // true 
+            // console.log('10' === 10); // false 
+            // console.log('10' === 10); // discuss
 
             console.log(user);
 
@@ -44,6 +58,22 @@
             }
             document.getElementById("loginform").reset();
         };
+
+        // function submitLogin() {
+        //     const user = document.getElementById("username").value;
+        //     const pass = document.getElementById("password").value;
+
+        //     console.log(user);
+
+        //     if (user === 'sonu' && pass === 'sonu') {
+        //         document.getElementById("aftersubmit").innerText = "Welcome!";
+        //     }
+        //     else {
+        //         document.getElementById("aftersubmit").innerText = "Wrong credentials!";
+        //     }
+        //     document.getElementById("loginform").reset();
+        // };
+
     </script>
 
 </body>
